@@ -1,0 +1,47 @@
+body{
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+}
+.v-day{
+	font-size: .2rem;
+	width: 100%;
+	/*height: .2rem;*/
+	line-height: .2rem;
+	display: flex;
+	background: #fafafa;
+}
+.v-day>p{
+	text-align: center;
+	flex: 1;
+}
+.v-ym{
+	width: 100%;
+	line-height: .6rem;
+	height: .6rem;
+	font-size: .3rem;
+	text-align: center;
+}
+.v-date{
+	width: 100%;
+	overflow: hidden;
+}
+.v-date>div{
+	width: 0.97142857rem;
+	margin: 0 0.05rem;
+	box-sizing: border-box;
+	text-align: center;
+	height: .8rem;
+	line-height: .8rem;
+	font-size: .2rem;
+	float: left;
+}
+.v-date>.dis{
+	color: #ccc;
+}
+.v-date>.cur{
+	color: #fff;
+	background: #12b7fe;
+	border-radius: .2rem;
+	line-height: .4rem;
+}

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="keywords" content="关键词1,关键词2,关键词3" />
+<meta name="description" content="对网站的描述" />
+<title>vue-calendar</title>
+<link type="text/css" rel="stylesheet" href="css/v-calendar.css"/>
+<!--<script type="text/javascript" src=" https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>-->
+<script type="text/javascript" src="js/fontSize.js"></script>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/v-calendar.js"></script>
+</head>
+<style>
+</style>
+<body>
+	<article class="v-calendar">
+		<section class="v-day">
+			<p>周日</p>
+			<p>周一</p>
+			<p>周二</p>
+			<p>周三</p>
+			<p>周四</p>
+			<p>周五</p>
+			<p>周六</p>
+		</section>
+		<section class="v-calendar-inner">
+			
+			
+			<section class="v-calendar-box" v-for="(item,index) in calNum">
+				<section class="v-ym">{{y[index]}}年{{m[index]}}月</section>
+				<section class="v-date">
+					<div v-for="item in day[index]"></div>
+					<div v-for="(item,dIdx) in dCount[m[index]-1]" :data-d=y[index]+"-"+m[index]+"-"+item :class="[dTrue>item&&mTrue==m[index]&&yTrue==y[index]?'dis':'',
+						dCur==item&&mCur==m[index]&&yCur==y[index]?'cur':'',dCur2==item&&mCur2==m[index]&&yCur2==y[index]?'cur':''] "  @click="calTab">
+						<div>{{item}}</div>	
+						<div>{{dCur==item&&mCur==m[index]&&yCur==y[index]?'入住':''}}</div>
+						<div>{{dCur2==item&&mCur2==m[index]&&yCur2==y[index]?'离店':''}}</div>
+					</div>
+				</section>
+			</section>
+			
+			
+		</section>
+	</article>
+</body>
+</html>
